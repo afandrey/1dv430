@@ -1,0 +1,17 @@
+.item img {
+	width: 200px;
+	height: auto;
+	float: none;
+}
+
+div.item {
+	display: inline-block;
+	text-align: center;
+	width: 200px;
+	padding: 20px;
+}
+
+.caption {
+	display: inline-block;
+	padding: 20px;
+}

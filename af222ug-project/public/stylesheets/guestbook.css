@@ -1,0 +1,69 @@
+.container {
+	text-align: center;
+}
+
+input {
+	width: 100%;
+	height: 40px;
+	border: none;
+	font-size: 20px;
+}
+
+.author {
+	font-size: 16px;
+}
+
+textarea {
+	resize: none;
+	width: 100%;
+	height: 80px;
+	border: none;
+	font-size: 14px;
+}
+
+button {
+	width: 80%;
+	border: solid #000;
+	border-radius: 25px;
+	color: #FFFFFF;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.postButton {
+	background-color: #6699FF;
+	margin-bottom: 5px;
+}
+
+.updateButton {
+	background-color: #66CC66;
+}
+
+.blogPosts {
+	background-color: #E8E8E8;
+	border-radius: 15px;
+	padding: 10px;
+	margin: 10px 10px 10px 10px;
+}
+
+h2 {
+	font-style: italic;
+}
+
+.pullRight {
+	float: right;
+	margin-left: 10px;
+	font-size: 12px;
+}
+
+img {
+	height: 100%;
+	width: 30px;
+}
+
+.likebtn {
+	float: right;
+}

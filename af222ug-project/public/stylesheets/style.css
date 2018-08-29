@@ -1,0 +1,185 @@
+/* --- Förberendade stilar --- */
+html, body, div, header, nav, main, article, section, aside, footer, iframe {
+	margin: 0;
+	padding: 0;
+}
+
+header, nav, main, article, section, aside, footer {
+	display: block;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+/* ----- Sticky Footer ----- */
+/* Sticky Footer Solution by Steve Hatcher  http://stever.ca   http://www.cssstickyfooter.com */
+html, body {height: 100%;}
+
+#wrapper {min-height: 100%;}
+
+main {overflow: auto; padding-bottom: 40px;}
+
+footer {position: relative; margin-top: -40px; height: 20px; clear: both;}
+
+body:before {content: ""; height:100%; float:left; width:0; margin-top:-32767px;}
+/* End of sticky footer */
+
+/* ----- Layout ----- */
+body {
+	font: 14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background: url('/images/bg.jpg');
+}
+
+h1 {
+	font: 2.5em Impact, Charcoal, sans-serif;
+	text-align: center;
+}
+
+main {
+	padding: 1%;
+	padding-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+}
+
+header img {
+	width: 100%;
+}
+
+#wrapper {
+	width: 80%;
+	text-align: left;
+	margin: 0 auto;
+	background: #f5f5f5;
+}
+
+a:link, a:visited {
+	color: #66CCFF;
+	text-decoration: none;
+}
+
+footer {
+	background-color: #e3e3e1;
+	padding: 10px;
+	text-align: center;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+}
+
+/* ----- Dropdown menu ----- */
+nav {
+	background-color: #e3e3e1;
+	width: 100%;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: inline-block;
+}
+
+li {
+	float: left;
+}
+
+li a, .dropbtn {
+	display: block;
+	color: #66CCFF;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+li a:hover, .dropdown:hover {
+	text-decoration: underline;
+}
+
+li.dropdown { display: inline-block; }
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #e3e3e1;
+	min-width: 140px;
+	z-index: 1;
+}
+
+.dropdown-content a {
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown:hover .dropdown-content { display: block; }
+
+.show-menu {
+	padding: 10px;
+	display: none;
+}
+
+input[type=checkbox] { display: none; }
+
+input[type=checkbox]:checked ~ #menu { display: block; }
+
+/* ----- Klasser ----- */
+.homeicon {
+	width: 20px;
+}
+
+.floatRight {
+	width: 40%;
+	height: auto;
+	float: right;
+}
+
+.floatLeft {
+	float: left;
+	width: 50%;
+}
+
+.pullRight {
+	float: right;
+}
+
+/* ----- Media Queries ----- */
+
+@media screen and (max-width: 700px) {
+	#wrapper { width: 100%; }
+	body { background-image: none; }
+}
+
+@media screen and (max-width: 650px) {
+	#indexIMG {
+		float: none;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	#description {
+		float: none;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#menu { display: none; }
+	.dropdown:hover .dropdown-content { display: none; }
+	.show-menu {
+		display: block;
+		float: right;
+	}
+	.show-home {
+		display: block;
+		float: left;
+	}
+}

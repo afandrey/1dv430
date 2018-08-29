@@ -1,0 +1,55 @@
+extends layout
+block scripts
+	script(type='text/javascript', src='http://code.jquery.com/jquery-latest.min.js')
+	script(type='text/javascript', src='/javascripts/live.js')
+		
+block content
+	link(rel='stylesheet', href='/stylesheets/live.css')
+	h1= title
+	#live
+		div(class='heatInfo')
+			div(class='box follow-scroll')
+				// HEAT INFO
+				#heatInfo
+					h2 Resultat
+					table
+						tr
+							th(class='red') Röd:
+							td(id='redDog')
+						tr
+							th(class='blue') Blå:
+							td(id='blueDog')
+						tr
+							th(class='white') Vit:
+							td(id='whiteDog')
+						tr
+							th(class='black') Svart:
+							td(id='blackDog')
+			// / HEAT INFO
+		div(class='heatList')
+			// HEAT LIST
+			h2 Norrköping 2017-05-06
+			#userList
+				table
+					thead
+						th Försök:
+						th Heat Nr:
+						th Radera?
+					tbody
+			// / HEAT LIST
+		// ADD HEAT
+		#addHeat
+			h2 Nytt Heat
+			fieldset
+				input#inputTryNr(type='text', placeholder='Försök Nr')
+				input#inputHeatNr(type='text', placeholder='Heat Nr')
+				br
+				input#inputRedDog(type='text', placeholder='Röd Hund')
+				input#inputBlueDog(type='text', placeholder='Blå Hund')
+				br
+				input#inputWhiteDog(type='text', placeholder='Vit Hund')
+				input#inputBlackDog(type='text', placeholder='Svart Hund')
+				br
+				button#btnAddHeat Lägg till
+		// / ADD HEAT
+	// / End wrap	

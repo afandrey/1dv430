@@ -1,0 +1,42 @@
+doctype
+html
+	head
+		title= title
+		link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+		<!--[if !IE7]>
+		<style type='text/css'>
+				#wrapper {display: table; height: 100%;}
+		</style>
+		<![endif]-->
+	body
+		nav
+			label(for='show-menu', class='show-menu') &#9776;
+			input(type='checkbox', id='show-menu', role='button')
+			ul(id='home')
+				li
+					a(href='/')
+						img(src='/images/homeicon.png', class='homeicon')
+			ul(id='menu')
+				li
+					a(href='/liveresults') Live Resultat
+				li(class='dropdown')
+					a(href='/archive', class='dropbtn') Arkiv
+					div(class='dropdown-content')
+						a(href='/160507') 160507
+						a(href='/160716') 160716
+				li
+					a(href='/gallery') Galleri
+				li
+					a(href='/guestbook') Gästbok
+				li
+					a(href='/links') Länkar
+		#wrapper
+			header
+				a(href='/')
+					img(src='/images/header.jpg', alt='header')
+			main
+				block content
+		footer
+			p Alva Fandrey, WP16.
+		script(src='/javascripts/global.js')
+		block scripts

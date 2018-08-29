@@ -1,0 +1,39 @@
+extends layout
+block scripts
+	script(src='/javascripts/gallery.js')
+
+block content
+	link(rel='stylesheet', href='/stylesheets/gallery.css')
+	h1= title
+	div(class='slideshow-container')
+		div(class='mySlides fade')
+			div(class='numbertext') 1/5
+			img(src='/gallery/01.jpg')
+			div(class='text') Bild 1
+
+		div(class='mySlides fade')
+			div(class='numbertext') 2/5
+			img(src='/gallery/02.jpg')
+			div(class='text') Bild 2
+
+		div(class='mySlides fade')
+			div(class='numbertext') 3/5
+			img(src='/gallery/03.jpg')
+			div(class='text') Bild 3
+
+		div(class='mySlides fade')
+			div(class='numbertext') 4/5
+			img(src='/gallery/04.jpg')
+			div(class='text') Bild 4
+
+		div(class='mySlides fade')
+			div(class='numbertext') 5/5
+			img(src='/gallery/05.jpg')
+			div(class='text') Bild 5
+
+	div(class='center')
+		span(class='dot')
+		span(class='dot')
+		span(class='dot')
+		span(class='dot')
+		span(class='dot')

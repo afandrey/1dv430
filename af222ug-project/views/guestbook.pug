@@ -1,0 +1,28 @@
+extends layout
+block scripts
+	script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js')
+	script(src='/javascripts/guestbook.js')
+
+block content
+	html(ng-app='BlogApp')
+	link(rel='stylesheet', href='/stylesheets/guestbook.css')
+	div(ng-controller='BlogController')
+		h1= title
+		div(class='container')
+			input(ng-model='post.title', placeholder='Titel')
+			input(ng-model='post.author', class='author', placeholder='Author')
+			textarea(ng-model='post.body', placeholder='Meddelande')
+			button(ng-click='createPost(post)', class='postButton') Skicka
+			button(ng-click='updatePost(post)', class='updateButton') Uppdatera
+
+		div(ng-repeat='post in posts', class='blogPosts')
+			h2 {{post.title}}
+				a(ng-click='editPost(post._id)', class='pullRight')
+					img(src='/images/edit.png')
+				a(ng-click='deletePost(post._id)', class='pullRight')
+					img(src='/images/remove.png')
+				a(class='likebtn', ng-click='post.likes = post.likes+1') {{post.likes}}
+					img(src='/images/heart.png')
+			em {{post.posted}}
+			p {{post.body}}
+			em Skriven av: {{post.author}}
